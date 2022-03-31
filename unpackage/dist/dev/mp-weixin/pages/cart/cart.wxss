@@ -1,0 +1,82 @@
+page {
+  padding-bottom: 54px;
+}
+.goods-wrapper {
+  display: flex;
+  height: 220rpx;
+  padding: 14rpx;
+  align-items: center;
+}
+.goods-wrapper .left-check {
+  width: 10%;
+}
+.goods-wrapper .right-detail {
+  display: flex;
+  background-color: #FBFAFB;
+  padding: 10rpx;
+  width: 90%;
+}
+.goods-wrapper .right-detail .img-wrapper .goods-img {
+  height: 100px;
+  width: 100px;
+}
+.goods-wrapper .right-detail .goods-detail {
+  width: 100%;
+}
+.goods-wrapper .right-detail .goods-detail .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.goods-wrapper .right-detail .goods-detail .descript {
+  font-size: 24rpx;
+  color: #cccccc;
+}
+.goods-wrapper .right-detail .goods-detail .num-out {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color: #cccccc;
+}
+.goods-wrapper .right-detail .goods-detail .num-out .num-inner {
+  align-self: flex-end;
+}
+.goods-wrapper .right-detail .goods-detail .num-out .num-inner .num {
+  color: red;
+}
+.goods-wrapper .right-detail .goods-detail .detail-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30rpx;
+}
+.goods-wrapper .right-detail .goods-detail .detail-wrapper .price {
+  font-weight: bold;
+  color: red;
+}
+.totalPrice {
+  position: fixed;
+  bottom: 50px;
+  height: 80rpx;
+  bottom: 0;
+  z-index: 999;
+  height: 100rpx;
+  width: 100%;
+  padding: 14rpx;
+  background-color: #f8f8f8;
+}
+.totalPrice .total-wrapper {
+  display: flex;
+  align-items: center;
+}
+.totalPrice .total-wrapper .textOuter {
+  margin-left: 100px;
+  margin-left: 80px;
+}
+.totalPrice .total-wrapper .textOuter .text {
+  font-weight: bold;
+}
+.totalPrice .total-wrapper .textOuter .price {
+  color: red;
+  font-weight: bold;
+}
+

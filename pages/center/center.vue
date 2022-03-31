@@ -35,7 +35,10 @@
 		</view>
 		<!-- 退出登录模态框 -->
 		<u-modal :show="isShowLoginout" content="确定退出登录吗？" :showCancelButton="true" @confirm="loginOut" @cancel="isShowLoginout=false; disableAvatar=false"></u-modal>
+
 	</view>
+	
+	
 </template>
 
 <script>
@@ -44,7 +47,7 @@
 			return {
 				isShowLoginout:false,
 				isShowAvatar:false, //是否预览头像标识
-				disableAvatar:false //控制遮罩层的显示与隐藏
+				disableAvatar:false ,//控制遮罩层的显示与隐藏
 			}
 		},
 		onLoad() {

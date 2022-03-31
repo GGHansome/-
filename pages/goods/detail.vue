@@ -74,13 +74,14 @@
 							<view class="text u-line-1">{{isCollect?"已收藏":"收藏"}}</view>
 						</view>
 						<view class="item" @tap="toCart" style="position: relative;">
-							<u-badge :value="cartNum" bgColor="#2979ff" style="position: absolute;left: 60rpx;"></u-badge>
+							<u-badge :value="cartNum" bgColor="#2979ff" class="u-badge"></u-badge>
 							<u-icon name="shopping-cart" :size="40" :color="$u.color['contentColor']"></u-icon>
 							<view class="text u-line-1">购物车</view>
 						</view>
 					</view>
 					<view class="right">
 						<u-button :disabled="goods.stock?false:true" class="cart btn" @click="addCart" :ripple="true" type="primary">加入购物车</u-button>
+						
 					</view>
 				</view>
 		</template>
@@ -295,7 +296,7 @@
 						.item {
 							padding: 20rpx;
 							border-bottom: solid 2rpx $u-border-color;
-
+							
 							.username {
 								font-size: 24rpx;
 								color: #999999;
@@ -348,6 +349,10 @@
 				.item {
 					position: relative;
 					text-align: center;
+					/deep/.u-badge{
+						position: absolute;
+						left: 60rpx;
+					}
 				}
 			}
 
@@ -364,6 +369,12 @@
 					border-radius: 10rpx;
 					color: #ffffff;
 				}
+				/* #ifdef MP-WEIXIN */
+				/deep/.u-button{
+					width: 80%;
+				}
+				/* #endif */
+				
 
 				.cart {
 					background-color: #2979ff;

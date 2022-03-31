@@ -20,7 +20,7 @@
 				</view>
 			</scroll-view>
 			<!-- 右侧商品栏 -->
-			<scroll-view v-if="this.sign === 0" scroll-y="true" class="scroll-right" @scrolltolower="toLower" >
+			<scroll-view v-if="sign === 0" scroll-y="true" class="scroll-right" @scrolltolower="toLower" >
 				<view class="goods-wrapper">
 					<u-row>
 						<u-col span="6" v-for="(goods,index) in goodsList" :key="index">
@@ -34,8 +34,8 @@
 					</u-row>
 				</view>
 			</scroll-view>
-			<u-empty v-if="this.sign === 2" text="暂无商品" mode="list" class="empty"></u-empty>
-			<u-loading-icon v-if="this.sign === 1" text="加载中" textSize="18" class="loading"></u-loading-icon>
+			<u-empty v-if="sign === 2" class="empty" text="暂无商品" mode="list" ></u-empty>
+			<u-loading-icon v-if="sign === 1" text="加载中" textSize="18" class="loading"></u-loading-icon>
 		</view>
 	</view>
 </template>
@@ -110,7 +110,7 @@
 	}
 </script>
 
-<style lang="less">
+<style lang="scss">
 	
 	.u-row{
 		flex-wrap: wrap;
@@ -133,6 +133,16 @@
 	.wrapper{
 		display: flex;
 		height: 100%;
+		// .empty,.loading{
+		// 	box-sizing: border-box;
+		// 	margin: 0 auto;
+		// 	padding-bottom: 54px;
+		// }
+		.u-empty,.u-loading-icon{
+			box-sizing: border-box;
+			margin: 0 auto;
+			padding-bottom: 54px;
+		}
 	}
 	.scroll-left{
 		height:100%;
@@ -154,11 +164,7 @@
 			border-bottom: 1px #e3e3e3 solid;
 		}
 	}
-	.empty,.loading{
-		box-sizing: border-box;
-		margin: 0 auto;
-		padding-bottom: 54px;
-	}
+
 	.scroll-right{
 		width: 75%;
 		height: 100%;

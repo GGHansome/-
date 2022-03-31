@@ -68,7 +68,7 @@
 				allCartId:[], // 用来全选和取消全选的购物车id备份
 				goodsChecked:[],//goods复选框的标识，用来全选的时候解决异步勾选延迟问题
 				loading:true,
-				show:false //模态框的标识
+				show:false ,//模态框的标识
 			}
 		},
 		onShow() {
@@ -254,6 +254,11 @@
 		position: fixed;
 		bottom: 50px;
 		height: 80rpx;
+		/*#ifdef MP-WEIXIN*/
+		bottom:0;
+		z-index:999;
+		height: 100rpx;
+		/* #endif */	
 		width: 100%;
 		padding: 14rpx;
 		background-color: #f8f8f8;
@@ -262,6 +267,9 @@
 			align-items: center;
 			.textOuter{
 				margin-left: 100px;
+				/*#ifdef MP-WEIXIN*/
+				margin-left: 80px;
+				/* #endif */
 				.text{
 					font-weight: bold;
 				}

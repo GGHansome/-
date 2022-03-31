@@ -79,15 +79,25 @@
 				return new Promise(async (resolve, reject) => {
 					// 设置唯一文件名
 						const file=this.fileList1[0]
+						// #ifdef H5
 						const fileName=file.name
+						//  #endif
+						// 小程序拿的是path
+						// #ifndef H5
+						const fileName=file.url
+						//  #endif
 						const suffix=fileName.slice(fileName.lastIndexOf("."))
 						const upFileName=this.$u.guid(20)+suffix
 						this.form.avatar = upFileName
 						// 请求获取oss-token的api
 						const oss= await this.$API.reqGetOssToken()
-					uni.uploadFile({
+						console.log(url);
+						uni.uploadFile({
 						url: oss.host, // 仅为示例，非真实的接口地址
 						filePath: url,
+						// #ifdef MP-WEIXIN
+								name: upFileName,
+						// #endif
 						// name: upFileName,
 						formData:{
 							key: upFileName,

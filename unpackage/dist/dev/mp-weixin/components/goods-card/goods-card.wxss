@@ -1,0 +1,27 @@
+.good-wrapper {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 7.5px;
+  margin-top: 10px;
+}
+.good-wrapper .good-img {
+  width: 100%;
+  height: 300rpx;
+}
+.good-wrapper .title {
+  font-weight: bold;
+  margin: 5px 0;
+}
+.good-wrapper .detail {
+  display: flex;
+  justify-content: space-between;
+}
+.good-wrapper .detail .price {
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+.good-wrapper .detail .salenum {
+  font-size: 12px;
+  color: #cccccc;
+}
+

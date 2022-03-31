@@ -1,0 +1,11 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
+.u-row {
+  flex-wrap: wrap;
+}
+.skeleton {
+  margin-bottom: 10rpx;
+}
+

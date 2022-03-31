@@ -1,0 +1,1 @@
+<navigator class="good-wrapper" url="{{'/pages/goods/detail?id='+item.id}}"><image class="good-img" src="{{item.cover_url}}" mode></image><view class="title"><text class="u-line-1">{{item.title}}</text></view><view class="detail"><view class="price">{{"￥ "+item.price}}</view><view class="salenum">{{"销量:"+item.sales}}</view></view></navigator>
